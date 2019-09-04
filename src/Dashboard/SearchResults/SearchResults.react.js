@@ -1,4 +1,6 @@
 import React from 'react';
+import IncidentHolder from '../IncidentHolder/IncidentHolder.react';
+import { Button } from 'semantic-ui-react';
 
 
 
@@ -10,7 +12,8 @@ class SearchResults extends React.Component {
     render() {
         return (
             <div >
-
+                <IncidentHolder />
+                <Button>Go to Incident Page</Button>
             </div>
         );
     }
