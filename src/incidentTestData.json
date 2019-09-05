@@ -1,0 +1,36 @@
+{
+    "incidents" : [
+        {
+            "incidentID" : 0,
+            "phoneNumber" : 9876543,
+            "incidentType" : "bill",
+            "priority" : 1,
+            "comments" : "0 This is a description",
+            "status": "active"
+        },
+        {
+            "incidentID" : 1,
+            "phoneNumber" : 9324562,
+            "incidentType" : "mobile",
+            "priority" : 2,
+            "comments" : "1 This is a description",
+            "status": "closed"
+        },
+        {
+            "incidentID" : 2,
+            "phoneNumber" : 9745632,
+            "incidentType" : "bill",
+            "priority" : 3,
+            "comments" : "2 This is a description",
+            "status": "active"
+        },
+        {
+            "incidentID" : 3,
+            "phoneNumber" : 9573432,
+            "incidentType" : "mobile",
+            "priority" : 2,
+            "comments" : "3 This is a description",
+            "status": "closed"
+        }
+    ]
+}

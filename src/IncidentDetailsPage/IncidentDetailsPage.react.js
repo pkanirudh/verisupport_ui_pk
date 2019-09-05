@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Button, Segment, Grid, Select } from 'semantic-ui-react';
+import { Header, Button, Segment, Grid, Select, Item } from 'semantic-ui-react';
 import IncidentHolder from '../Dashboard/IncidentHolder/IncidentHolder.react';
 
 
@@ -20,8 +20,10 @@ class IncidentDetailsPage extends React.Component {
                 <Grid.Column>
                 <Segment>
                     <Header as="h2" textAlign="center">Incident Details</Header>
-                
-                    <IncidentHolder/>
+                    <Item.Group>
+                        <IncidentHolder/>
+                    </Item.Group>
+                    
                     <label>Set Priority: </label>
                     <Select  options={priorityOptions} className="ui"/>
                             {/* <select name="skills" multiple="" className="ui dropdown">
@@ -32,7 +34,6 @@ class IncidentDetailsPage extends React.Component {
                             <Button color="red">Close Incident</Button>
                 </Segment>
                 </Grid.Column>
-                
                 </Grid>
                 
             </div>
