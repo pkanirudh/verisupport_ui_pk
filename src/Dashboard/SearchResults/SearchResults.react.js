@@ -14,6 +14,42 @@ const searchCriteriaOptions = [
 class SearchResults extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            results: [],
+            loaded: false,
+            hasResults: false
+        }
+    }
+
+    componentDidMount() {
+        let url = "http://localhost:6969/incidents"
+        fetch(url).then(resp=>resp.json()).then(results=>{this.setState({results:results})
+        console.log(results);
+    });
+        if(this.state.results.length==0){
+            this.setState({hasResults:false})
+            console.log("results not loaded")
+            console.log(this.state.hasResults)
+            console.log(this.state.results)
+        }
+        else{
+            this.setState({hasResults:true})
+            console.log("results loaded")
+            console.log(this.state.results)
+        }
+    }
+    getResults = ()=>{
+        if(this.state.hasResults){
+            return(
+                <Item.Group divided>
+                    <IncidentHolder/>
+                    <IncidentHolder/>
+                </Item.Group>
+            )
+        }
+        else{
+            return(<p>No results for given query</p>)
+        }
     }
 
     render() {
@@ -45,8 +81,8 @@ class SearchResults extends React.Component {
                     <Form.Button>Search</Form.Button>
                 </Form>
                 <Item.Group divided>
-                    {/* <IncidentHolder/>
-                    <IncidentHolder/> */}
+                    <IncidentHolder/>
+                    <IncidentHolder/>
                 </Item.Group>
             </Segment>
         );
