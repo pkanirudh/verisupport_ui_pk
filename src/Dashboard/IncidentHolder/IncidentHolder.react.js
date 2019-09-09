@@ -2,13 +2,13 @@ import React from 'react';
 import { Item } from 'semantic-ui-react';
 
 
-
-const IncidentHolder = () => {
+//This module is used to hold individual incidents in the incident details page and the customer and agent dashboards
+const IncidentHolder = (props) => {
 
     return (
             <Item>
                 <Item.Content>
-                    <Item.Header>Issue Heading</Item.Header>
+                    <Item.Header>{props.details.comments}</Item.Header>
                     <Item.Description>
                             <p>This is where the description about the compliant/issue comes in.</p>
                     </Item.Description>

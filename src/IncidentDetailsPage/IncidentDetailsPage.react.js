@@ -2,8 +2,10 @@ import React from 'react';
 import { Header, Button, Segment, Grid, Select, Item } from 'semantic-ui-react';
 import IncidentHolder from '../Dashboard/IncidentHolder/IncidentHolder.react';
 
+//This module is opened when a user clicks on an incident from the list of incidents either from the search results of the agent's dashboard or from the customer's dashboard
+//Has options to raise the priority of the incident or close the incident.
 
-const priorityOptions = [
+const priorityOptions = [       
     {key: "low", value: "low", text: "Low"},
     {key: "medium", value: "medium", text: "Medium"},
     {key: "high", value: "high", text: "High"}
@@ -20,17 +22,12 @@ class IncidentDetailsPage extends React.Component {
                 <Grid.Column>
                 <Segment>
                     <Header as="h2" textAlign="center">Incident Details</Header>
-                    <Item.Group>
-                        <IncidentHolder/>
+                    <Item.Group>    {/* Displaying incident details using Incident Holder component  */}
+                        <IncidentHolder from="incdetails"/>
                     </Item.Group>
                     
                     <label>Set Priority: </label>
                     <Select  options={priorityOptions} className="ui"/>
-                            {/* <select name="skills" multiple="" className="ui dropdown">
-                                <option value="low">Low</option>
-                                <option value="medium">Medium</option>
-                                <option value="high">High</option>
-                            </select> */}
                             <Button color="red">Close Incident</Button>
                 </Segment>
                 </Grid.Column>
