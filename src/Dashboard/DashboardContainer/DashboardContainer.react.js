@@ -3,7 +3,7 @@ import SearchResults from '../SearchResults/SearchResults.react';
 import { Item, Button, Grid, Segment } from 'semantic-ui-react';
 
 //This stateless component acts as a container to all the elements in the admin dashboard
-const DashboardContainer = () => {
+const DashboardContainer = (props) => {
 
     return (
         <div className='dashboardcontainer_wrapper'>
@@ -13,7 +13,6 @@ const DashboardContainer = () => {
             <Item.Group>
             <Item>
                 {/* This section contains information about the agent with the profile picture, Name, employee number and other details */}
-            <Item.Image src='https://react.semantic-ui.com/images/avatar/large/stevie.jpg' />
                 <Item.Content>
                     <Item.Header>Agent Name</Item.Header>
                         <Item.Description>Agent Details</Item.Description>

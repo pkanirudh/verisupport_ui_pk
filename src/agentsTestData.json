@@ -1,0 +1,34 @@
+{
+    "agents":[
+        {
+            "username" : "luckybword",
+            "name" : "Johnny English",
+            "agentId" : "a34f6afas6daad4w"
+        },
+        {
+            "username" : "codename47",
+            "name" : "Mr. Smith",
+            "agentId" : "54fa6f56a5faf5af"
+        },
+        {
+            "username" : "fourthechelon",
+            "name" : "Sam Fisher",
+            "agentId" : "4s684g6s46gs68e7"
+        },
+        {
+            "username" : "agent007",
+            "name" : "James Bond",
+            "agentId" : "we68g4a5sg8we7g"
+        },
+        {
+            "username" : "amnesia",
+            "name" : "Jason Bourne",
+            "agentId" : "6w5e7yhage59sdfs"
+        },
+        {
+            "username" : "equilizer",
+            "name" : "Robert McCall",
+            "agentId" : "f64sfw64w78f48se"
+        }
+    ]
+}

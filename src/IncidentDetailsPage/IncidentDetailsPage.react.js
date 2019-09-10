@@ -13,6 +13,25 @@ const priorityOptions = [
 class IncidentDetailsPage extends React.Component {
     constructor(props) {
         super(props);
+
+        this.state={
+            data: ""
+        }
+
+        this.handleCloseIncident = this.handleCloseIncident.bind(this);
+        this.handleRemoveIncident = this.handleRemoveIncident.bind(this);
+    }
+
+    handleCloseIncident(incId){
+        //axios call to close Incident
+        //set active to closed in the incident state
+        alert("incident close")
+    }
+
+    handleRemoveIncident(incId){
+        //axios call to remove incident
+        //show incident is removed and/or redirect to agent dashboard
+        alert("incident remove")
     }
 
     render() {
@@ -23,12 +42,26 @@ class IncidentDetailsPage extends React.Component {
                 <Segment>
                     <Header as="h2" textAlign="center">Incident Details</Header>
                     <Item.Group>    {/* Displaying incident details using Incident Holder component  */}
-                        <IncidentHolder from="incdetails"/>
+                        {/* <IncidentHolder from="incdetails"/> */}
+                        <Item>
+                <Item.Content>
+                    <Item.Header>Issue Heading</Item.Header>
+                    <Item.Description>
+                            <p>This is where the description about the compliant/issue comes in.</p>
+                    </Item.Description>
+                    <Item.Extra>
+                        <p>Issue Type: Active/Closed</p>
+                        <p>Issued by: Author Name</p>
+                        <p>Issue added on: DD/MM/YYYY</p>
+                    </Item.Extra>
+                </Item.Content>
+            </Item>
                     </Item.Group>
                     
                     <label>Set Priority: </label>
-                    <Select  options={priorityOptions} className="ui"/>
-                            <Button color="red">Close Incident</Button>
+                    <Select  options={priorityOptions} className="ui" defaultValue="high" />
+                            <Button color="blue" onClick={this.handleCloseIncident}>Close Incident</Button>
+                            <Button color="red" onClick={this.handleRemoveIncident}>Remove Incident</Button>
                 </Segment>
                 </Grid.Column>
                 </Grid>
